@@ -26,6 +26,8 @@
     padding => espaçamento interno
     margin => espaçamento externo
     text-align => Alinha o texto
+    href => Local para onde queremos que o link nos envie
+    opacity => Transparencia do elemento
     */
 
     * {
@@ -38,6 +40,7 @@
   
   .caixa-superior {
       background-image: url("./dev.png");
+      background-size: cover;
       height: 90vh;
   }
   
@@ -48,7 +51,7 @@
   
   .titulo-cabecalho {
       font-size: 24px;
-      color: #FFFFFF;
+      color: white;
       display: inline;
   }
   
@@ -58,6 +61,7 @@
       display: inline;
       margin-left: 20px;
       cursor: pointer;
+      text-decoration: none;
   }
   
   h1 {
@@ -69,6 +73,8 @@
   }
   
   form {
+      opacity: 0;
+      transition: opacity 1s linear;
       background-color: #FFFFFF;
       border-radius: 10px;
       float: right;
@@ -76,6 +82,10 @@
       margin-right: 50px;
       position: relative;
       bottom: 70px;
+  }
+  
+  .mostrar-formulario{
+      opacity: 1;
   }
   
   input {
@@ -128,7 +138,7 @@
       margin-bottom: 50px;
   }
   
-  .titulo-meio {
+  #titulo-meio {
       font-size: 40px;
       color: #252B42;
       margin-top: 50px;
@@ -164,7 +174,7 @@
       background-color: #00095d;
   }
   
-  .titulo-inferior {
+  #titulo-inferior {
       color: #FFFFFF;
       font-size: 40px;
       text-align: center;
